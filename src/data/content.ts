@@ -36,9 +36,6 @@ export const headerCta = {
   href: `https://wa.me/${siteConfig.phoneWhatsapp}`,
 };
 
-// Legenda curva usada no selo/emblema (logo compacto do header mobile).
-export const emblemCaption = "PSICOLOGIA & PSICANÁLISE";
-
 export const heroContent = {
   title: "Nicole Amorim",
   subtitle: "PSICÓLOGA E PSICANALISTA",
@@ -59,7 +56,10 @@ export const heroContent = {
   // de gradiente escuro artificial por cima, a própria foto já tem o contraste.
   image: {
     src: "/images/hero-bg.jpg",
-    alt: "Nicole Amorim em seu espaço de atendimento",
+    // Recorte vertical dedicado para o mobile (mesma foto, enquadramento
+    // em pé) — usado abaixo do breakpoint lg no lugar de `src`.
+    mobileSrc: "/images/hero-bg-mobile.jpg",
+    alt: "Nicole Amorim sentada em ambiente acolhedor",
   },
 };
 
@@ -187,7 +187,7 @@ export const approachContent = {
   badge: "+20Mil ATENDIMENTOS REALIZADOS",
   image: {
     src: "/images/abordagem-foto.jpg",
-    alt: "Nicole Amorim em seu ambiente de atendimento",
+    alt: "Nicole Amorim sorrindo, lendo um livro em ambiente acolhedor",
   },
 };
 

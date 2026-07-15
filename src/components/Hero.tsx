@@ -11,11 +11,19 @@ export default function Hero() {
   return (
     <section className="relative min-h-[880px] overflow-hidden sm:min-h-[940px] lg:min-h-[860px]">
       <Image
+        src={heroContent.image.mobileSrc}
+        alt={heroContent.image.alt}
+        fill
+        priority
+        className="object-cover object-[center_12%] lg:hidden"
+        sizes="100vw"
+      />
+      <Image
         src={heroContent.image.src}
         alt={heroContent.image.alt}
         fill
         priority
-        className="object-cover object-[78%_22%] lg:object-[center_30%]"
+        className="hidden object-cover object-[center_30%] lg:block"
         sizes="100vw"
       />
 

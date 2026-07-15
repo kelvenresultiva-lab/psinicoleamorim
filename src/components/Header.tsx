@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X, CalendarDays } from "lucide-react";
-import { navLinks, siteConfig, headerCta, heroContent, emblemCaption } from "@/data/content";
-import Emblem from "./Emblem";
+import { navLinks, siteConfig, headerCta, heroContent } from "@/data/content";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,15 +33,13 @@ export default function Header() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#topo" className="flex items-center gap-3">
-            <span
-              className={`hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-gold font-serif text-xl text-gold lg:flex`}
-            >
-              {siteConfig.professionalNameShort.charAt(0)}
-            </span>
-            <Emblem
-              letter={siteConfig.professionalNameShort.charAt(0)}
-              caption={emblemCaption}
-              className="h-12 w-12 lg:hidden"
+            <Image
+              src="/images/logo-mark.png"
+              alt={`Logo de ${siteConfig.professionalNameShort}`}
+              width={280}
+              height={387}
+              priority
+              className="h-12 w-auto shrink-0 object-contain"
             />
             <span className="hidden flex-col leading-tight sm:flex">
               <span className="font-serif text-lg text-charcoal">
