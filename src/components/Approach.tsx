@@ -48,11 +48,11 @@ export default function Approach() {
           </div>
 
           {/* Parágrafos: linhas com ícone no mobile, texto simples no desktop */}
-          <div className="mb-8 divide-y divide-white/10 lg:hidden">
+          <div className="mb-8 space-y-5 lg:hidden">
             {approachContent.paragraphs.map((paragraph) => {
               const Icon = paragraphIconMap[paragraph.icon];
               return (
-                <div key={paragraph.text} className="flex items-start gap-4 py-5 first:pt-0 last:pb-0">
+                <div key={paragraph.text} className="flex items-start gap-4">
                   <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold">
                     <Icon size={24} strokeWidth={1.75} />
                   </span>

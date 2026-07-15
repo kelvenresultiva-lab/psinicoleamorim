@@ -178,7 +178,7 @@ export const approachContent = {
   paragraphs: [
     {
       icon: "user",
-      text: "Meu trabalho parte da escuta cuidadosa da história de cada paciente, respeitando o tempo e as particularidades de cada processo terapêutico.",
+      text: "Parto da escuta cuidadosa da história de cada paciente, respeitando seu tempo e particularidades.",
     },
     {
       icon: "heart-handshake",
