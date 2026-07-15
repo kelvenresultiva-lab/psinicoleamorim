@@ -76,14 +76,14 @@ export default function Approach() {
               return (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+                  className="rounded-2xl bg-cream p-5 text-center"
                 >
                   <span className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-gold/15 text-gold">
                     <Icon size={26} strokeWidth={1.5} />
                   </span>
-                  <p className="font-serif text-base text-gold">{item.title}</p>
+                  <p className="font-serif text-base text-gold-dark">{item.title}</p>
                   <span className="mx-auto my-2 block h-px w-8 bg-gold" />
-                  <p className="text-sm leading-relaxed text-white/70">{item.description}</p>
+                  <p className="text-sm leading-relaxed text-[#4a4a4a]">{item.description}</p>
                 </div>
               );
             })}
