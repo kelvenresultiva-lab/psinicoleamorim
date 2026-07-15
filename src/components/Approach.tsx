@@ -56,7 +56,7 @@ export default function Approach() {
               sizes="(min-width: 1024px) 28rem, 90vw"
             />
           </div>
-          <div className="absolute -bottom-6 -left-2 flex h-32 w-32 -rotate-6 items-center justify-center rounded-full bg-gold p-4 text-center shadow-lg sm:-left-8">
+          <div className="absolute -bottom-6 -left-2 flex h-32 w-32 -rotate-3 items-center justify-center rounded-full bg-gold p-4 text-center shadow-[0_12px_30px_-8px_rgba(0,0,0,0.35)] ring-4 ring-white/30 sm:-left-8">
             <span className="font-serif text-sm leading-tight text-white">
               {approachContent.badge}
             </span>

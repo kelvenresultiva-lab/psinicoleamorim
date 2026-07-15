@@ -55,7 +55,11 @@ export default function Hero() {
               <Heart size={18} className="inline-block text-gold align-middle" />
             </p>
 
-            <ul className="order-4 mb-10 max-w-md space-y-4">
+            <p className="order-4 mb-10 max-w-md text-base leading-relaxed text-white/90 sm:hidden">
+              {heroContent.mobileTagline}
+            </p>
+
+            <ul className="order-4 mb-10 hidden max-w-md space-y-4 sm:block">
               {heroContent.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-3">
                   <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-gold text-gold">
@@ -66,22 +70,22 @@ export default function Hero() {
               ))}
             </ul>
 
-            <div className="order-5 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <div className="order-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <a
                 href={heroContent.primaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-7 py-3 text-sm font-semibold tracking-wider text-white uppercase transition-colors hover:bg-gold-dark sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-5 py-2 text-xs font-semibold tracking-wider text-white uppercase transition-colors hover:bg-gold-dark sm:w-auto sm:px-7 sm:py-3 sm:text-sm"
               >
                 {heroContent.primaryCta.label}
-                <WhatsappIcon size={16} />
+                <WhatsappIcon size={14} />
               </a>
               <a
                 href={heroContent.secondaryCta.href}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/70 px-7 py-3 text-sm font-semibold tracking-wider text-white uppercase transition-colors hover:bg-white hover:text-charcoal sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/70 px-5 py-2 text-xs font-semibold tracking-wider text-white uppercase transition-colors hover:bg-white hover:text-charcoal sm:w-auto sm:px-7 sm:py-3 sm:text-sm"
               >
                 {heroContent.secondaryCta.label}
-                <User size={16} />
+                <User size={14} />
               </a>
             </div>
           </div>

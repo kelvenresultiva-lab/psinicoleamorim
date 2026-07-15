@@ -41,6 +41,9 @@ export const heroContent = {
   subtitle: "PSICÓLOGA E PSICANALISTA",
   taglineStart: "Um espaço seguro para você ser,",
   taglineHighlight: "sentir e se cuidar.",
+  // Exibida só no mobile, no lugar dos bullets (que ficam só a partir do sm).
+  mobileTagline:
+    "A terapia é um convite para olhar para si com mais cuidado, compreender seus conflitos e descobrir novas possibilidades para a sua vida.",
   bullets: [
     "Atendimento individual e de casal.",
     "Abordagem psicanalítica.",
@@ -88,9 +91,7 @@ export const introContent = {
 };
 
 export const aboutContent = {
-  // ATENÇÃO: número fictício (dado de exemplo, não confirmado com a profissional).
-  // Substituir pelo tempo real de experiência antes de publicar o site.
-  experienceBadge: "+15 ANOS DE EXPERIÊNCIA",
+  badge: "CUIDADO EM CADA HISTÓRIA",
   image: {
     src: "/images/sobre-foto.jpg",
     alt: "Retrato de Nicole Amorim",
@@ -182,9 +183,7 @@ export const approachContent = {
     { title: "Resultados Positivos", subtitle: "Acompanhamento comprometido com sua evolução" },
   ],
   ctaLabel: "VAMOS CONVERSAR?",
-  // ATENÇÃO: número fictício (dado de exemplo, não confirmado com a profissional).
-  // Substituir pelo número real de atendimentos antes de publicar o site.
-  badge: "+20Mil ATENDIMENTOS REALIZADOS",
+  badge: "COMPROMISSO EM CADA SESSÃO",
   image: {
     src: "/images/abordagem-foto.jpg",
     alt: "Nicole Amorim sorrindo, lendo um livro em ambiente acolhedor",

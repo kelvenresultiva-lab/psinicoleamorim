@@ -18,9 +18,9 @@ export default function About() {
             />
           </div>
 
-          <div className="absolute -top-6 -right-2 flex h-28 w-28 rotate-6 items-center justify-center rounded-full bg-gold p-3 text-center shadow-lg sm:-right-6">
+          <div className="absolute -top-6 -right-2 flex h-28 w-28 rotate-3 items-center justify-center rounded-full bg-gold p-3 text-center shadow-[0_12px_30px_-8px_rgba(0,0,0,0.35)] ring-4 ring-white/40 sm:-right-6">
             <span className="font-serif text-sm leading-tight text-white">
-              {aboutContent.experienceBadge}
+              {aboutContent.badge}
             </span>
           </div>
 
