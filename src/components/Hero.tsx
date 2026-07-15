@@ -36,11 +36,12 @@ export default function Hero() {
               {heroContent.subtitle}
             </p>
 
-            <h1 className="order-1 mb-2 max-w-2xl font-serif text-5xl leading-tight text-white sm:text-6xl lg:order-2 lg:mb-6 lg:text-7xl">
+            <h1 className="order-1 mb-2 max-w-2xl font-serif text-4xl leading-tight text-white sm:text-6xl lg:order-2 lg:mb-6 lg:text-7xl">
               {heroFirstName}
               {heroLastName && (
                 <>
-                  <br />
+                  {" "}
+                  <br className="hidden sm:block" />
                   {heroLastName}
                 </>
               )}

@@ -172,17 +172,33 @@ export const testimonialsContent = {
 } as const;
 
 export const approachContent = {
-  eyebrow: "COMO FUNCIONA MEU TRABALHO:",
-  heading: "Análise pessoal e terapia de casal",
+  eyebrow: "COMO FUNCIONA MEU TRABALHO",
+  heading: "Análise pessoal e terapia",
+  headingHighlight: "de casal",
   paragraphs: [
-    "Meu trabalho parte da escuta cuidadosa da história de cada paciente, respeitando o tempo e as particularidades de cada processo terapêutico.",
-    "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento e transformação genuína.",
+    {
+      icon: "user",
+      text: "Meu trabalho parte da escuta cuidadosa da história de cada paciente, respeitando o tempo e as particularidades de cada processo terapêutico.",
+    },
+    {
+      icon: "heart-handshake",
+      text: "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento e transformação genuína.",
+    },
   ],
   highlights: [
-    { title: "Ambiente Seguro", subtitle: "Sigilo e acolhimento em cada sessão" },
-    { title: "Resultados Positivos", subtitle: "Acompanhamento comprometido com sua evolução" },
+    {
+      icon: "armchair",
+      title: "Ambiente Seguro",
+      description: "Sigilo e acolhimento em cada sessão. Um espaço onde você pode ser quem é.",
+    },
+    {
+      icon: "sprout",
+      title: "Resultados Reais",
+      description: "Acompanhamento comprometido com sua evolução e bem-estar emocional.",
+    },
   ],
   ctaLabel: "VAMOS CONVERSAR?",
+  secondaryCta: { label: "Agende sua sessão", href: "#contato" },
   badge: "COMPROMISSO EM CADA SESSÃO",
   image: {
     src: "/images/abordagem-foto.jpg",
