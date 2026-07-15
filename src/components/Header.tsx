@@ -41,11 +41,15 @@ export default function Header() {
               priority
               className="h-12 w-auto shrink-0 object-contain"
             />
-            <span className="hidden flex-col leading-tight sm:flex">
-              <span className="font-serif text-lg text-charcoal">
+            <span className="flex flex-col leading-tight">
+              <span
+                className={`font-serif text-lg transition-colors ${solid ? "text-charcoal" : "text-white"}`}
+              >
                 {siteConfig.professionalNameShort}
               </span>
-              <span className="text-[11px] font-medium tracking-[0.15em] text-gold-dark uppercase">
+              <span
+                className={`text-[11px] font-medium tracking-[0.15em] uppercase transition-colors ${solid ? "text-gold-dark" : "text-gold"}`}
+              >
                 {heroContent.subtitle}
               </span>
             </span>
