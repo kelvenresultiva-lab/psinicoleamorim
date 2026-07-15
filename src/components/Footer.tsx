@@ -1,4 +1,5 @@
 import { footerContent, siteConfig } from "@/data/content";
+import InstagramIcon from "./InstagramIcon";
 
 export default function Footer() {
   return (
@@ -12,6 +13,15 @@ export default function Footer() {
             <p className="text-sm">
               {siteConfig.title} — {siteConfig.crp}
             </p>
+            <a
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm transition-colors hover:text-gold"
+            >
+              <InstagramIcon size={18} />
+              {siteConfig.instagramHandle}
+            </a>
           </div>
 
           <div>

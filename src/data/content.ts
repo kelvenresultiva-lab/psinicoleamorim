@@ -15,6 +15,8 @@ export const siteConfig = {
   phoneDisplay: "(32) 99199-3814",
   phoneWhatsapp: "5532991993814",
   email: "nicoleamorimpsi@gmail.com",
+  instagramHandle: "@psinicoleamorim",
+  instagramUrl: "https://www.instagram.com/psinicoleamorim",
   addressLine1,
   addressLine2,
   // Link para abrir no app/site do Google Maps (usado em botões "ver no mapa").
