@@ -45,8 +45,8 @@ export const heroContent = {
   taglineStart: "Um espaço seguro para você ser,",
   taglineHighlight: "sentir e se cuidar.",
   bullets: [
-    "Atendimento para casal e família.",
-    "Psicóloga e psicanalista.",
+    "Atendimento individual e de casal.",
+    "Abordagem psicanalítica.",
     "Atendimento Presencial (São João Del Rei) e on-line.",
   ],
   primaryCta: {
@@ -100,10 +100,10 @@ export const aboutContent = {
   eyebrow: "OLÁ, SOU NICOLE",
   heading: "Uma trajetória dedicada ao cuidado emocional",
   paragraphs: [
-    "Sou psicóloga clínica, com atuação voltada ao atendimento de casais e famílias que buscam compreender melhor suas emoções, vínculos e histórias de vida.",
-    "Minha prática é fundamentada na abordagem psicanalítica, entendendo que cada pessoa carrega uma trajetória única, que merece ser ouvida com respeito, sigilo e sem julgamentos.",
-    "Ao longo da minha carreira, já acompanhei diversos pacientes em processos de autoconhecimento, superação de crises e construção de uma vida emocional mais equilibrada.",
-    "Acredito que a psicoterapia é um convite à transformação — um espaço seguro para que você possa se reconhecer e encontrar novos caminhos.",
+    "Atendo adolescentes, adultos e casais em processos de análise pessoal, com foco em quem deseja se conhecer melhor e transformar questões que incomodam — não trabalho com uma área voltada a diagnósticos específicos.",
+    "Acredito que a terapia não se limita a aliviar o sofrimento, mas também a compreender como ele se constrói. Meu trabalho busca oferecer um espaço de escuta em que cada pessoa possa se implicar em sua própria história, reconhecendo padrões, conflitos e formas de se relacionar consigo mesma e com os outros.",
+    "Mais do que oferecer respostas prontas, procuro construir, junto ao paciente, novas formas de viver sua própria história, sempre a partir da abordagem psicanalítica.",
+    "Ofereço uma escuta atenta para ajudar cada pessoa a construir um saber próprio sobre sua história e diminuir o sofrimento diante dos conflitos da vida.",
   ],
   ctaLabel: "VAMOS CONVERSAR?",
 };
@@ -172,7 +172,7 @@ export const testimonialsContent = {
 
 export const approachContent = {
   eyebrow: "COMO FUNCIONA MEU TRABALHO:",
-  heading: "Atendimento para casais e famílias",
+  heading: "Análise pessoal e terapia de casal",
   paragraphs: [
     "Meu trabalho parte da escuta cuidadosa da história de cada paciente, respeitando o tempo e as particularidades de cada processo terapêutico.",
     "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento e transformação genuína.",
@@ -185,11 +185,9 @@ export const approachContent = {
   // ATENÇÃO: número fictício (dado de exemplo, não confirmado com a profissional).
   // Substituir pelo número real de atendimentos antes de publicar o site.
   badge: "+20Mil ATENDIMENTOS REALIZADOS",
-  // ATENÇÃO: foto gerada por IA (não é uma fotografia real da Nicole) —
-  // placeholder temporário. Substituir por foto real sorrindo quando disponível.
   image: {
     src: "/images/abordagem-foto.jpg",
-    alt: "Nicole Amorim sorrindo",
+    alt: "Nicole Amorim em seu ambiente de atendimento",
   },
 };
 
@@ -242,6 +240,11 @@ export const faqContent = {
   },
   questions: [
     {
+      question: "Como funciona a primeira sessão?",
+      answer:
+        "A primeira sessão é um momento de entrevista e aproximação. Nela, busco compreender o motivo que levou você a procurar a terapia e conhecer um pouco do seu contexto de vida. Também alinhamos os combinados sobre o processo terapêutico e as expectativas para os próximos encontros.",
+    },
+    {
       question: "Como são as sessões de psicoterapia?",
       answer:
         "As sessões têm duração de 50 minutos e acontecem semanalmente, de forma presencial ou online, respeitando o sigilo profissional e o ritmo de cada paciente.",
@@ -254,7 +257,7 @@ export const faqContent = {
     {
       question: "Qual a melhor idade para iniciar a psicoterapia?",
       answer:
-        "Não existe uma idade certa. Atendo adultos de todas as idades, individualmente ou em atendimento de casal e família — o importante é o desejo de iniciar o processo.",
+        "Não existe uma idade certa — atendo adolescentes, adultos e casais. Nos atendimentos on-line, recebo pacientes a partir de 15 anos, considerando as particularidades desse formato; no presencial, atendo pessoas de todas as idades.",
     },
     {
       question: "Qual o endereço da clínica?",

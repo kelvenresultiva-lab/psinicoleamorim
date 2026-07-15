@@ -2,7 +2,7 @@ import { footerContent, siteConfig } from "@/data/content";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1A1A] py-14 text-white/70">
+    <footer className="bg-dark py-14 text-white/70">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div>

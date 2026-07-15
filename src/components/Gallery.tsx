@@ -10,7 +10,7 @@ export default function Gallery() {
           <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold-dark uppercase">
             {galleryContent.eyebrow}
           </p>
-          <h2 className="mb-5 font-serif text-3xl text-[#1A1A1A] sm:text-4xl">
+          <h2 className="mb-5 font-serif text-3xl text-charcoal sm:text-4xl">
             {galleryContent.heading}
           </h2>
           <p className="text-[#4a4a4a]">{galleryContent.subtext}</p>

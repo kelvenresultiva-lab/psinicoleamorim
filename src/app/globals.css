@@ -4,11 +4,14 @@
   --background: #ffffff;
   --foreground: #333333;
 
-  --color-gold: #c9a15c;
-  --color-gold-dark: #a9813f;
-  --color-cream: #f5f0e8;
-  --color-cream-dark: #efe7d8;
-  --color-charcoal: #1a1a1a;
+  /* Paleta baseada na logo oficial da Nicole (laranja queimado + azul + roxo escuro). */
+  --color-gold: #d95a3a;
+  --color-gold-dark: #b8492e;
+  --color-cream: #f7f3ef;
+  --color-cream-dark: #ede4da;
+  --color-charcoal: #231824;
+  --color-dark: #3a2732;
+  --color-accent: #4a56c8;
 }
 
 @theme inline {
@@ -19,6 +22,8 @@
   --color-cream: var(--color-cream);
   --color-cream-dark: var(--color-cream-dark);
   --color-charcoal: var(--color-charcoal);
+  --color-dark: var(--color-dark);
+  --color-accent: var(--color-accent);
   --font-sans: var(--font-poppins);
   --font-serif: var(--font-playfair);
 }

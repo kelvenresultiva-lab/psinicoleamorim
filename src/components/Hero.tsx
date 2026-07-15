@@ -70,7 +70,7 @@ export default function Hero() {
               </a>
               <a
                 href={heroContent.secondaryCta.href}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/70 px-7 py-3 text-sm font-semibold tracking-wider text-white uppercase transition-colors hover:bg-white hover:text-[#1A1A1A] sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/70 px-7 py-3 text-sm font-semibold tracking-wider text-white uppercase transition-colors hover:bg-white hover:text-charcoal sm:w-auto"
               >
                 {heroContent.secondaryCta.label}
                 <User size={16} />

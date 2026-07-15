@@ -9,7 +9,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function ContactBar() {
   return (
-    <section id="contato" className="bg-[#1A1A1A] py-16 lg:py-20">
+    <section id="contato" className="bg-dark py-16 lg:py-20">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid grid-cols-1 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {contactBarContent.map((item) => {

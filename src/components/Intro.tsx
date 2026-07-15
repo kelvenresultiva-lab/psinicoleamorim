@@ -14,7 +14,7 @@ export default function Intro() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16 lg:py-20">
         <div className="flex flex-col gap-10 lg:flex-row lg:gap-0 lg:divide-x lg:divide-gold/25">
           <Reveal className="lg:w-[22%] lg:pr-10">
-            <h2 className="font-serif text-3xl leading-snug text-[#1A1A1A] lg:text-4xl">
+            <h2 className="font-serif text-3xl leading-snug text-charcoal lg:text-4xl">
               {introContent.heading}{" "}
               <em className="text-gold italic">{introContent.headingHighlight}</em>
             </h2>
@@ -35,7 +35,7 @@ export default function Intro() {
                       <Icon size={28} strokeWidth={1.75} />
                     </div>
                     <div className="border-l border-gold/30 pl-5 sm:border-0 sm:pl-0">
-                      <h3 className="font-serif text-lg text-[#1A1A1A]">{item.title}</h3>
+                      <h3 className="font-serif text-lg text-charcoal">{item.title}</h3>
                       <span className="mt-2 mb-3 hidden h-px w-8 bg-gold sm:mx-auto sm:block" />
                       <p className="text-sm leading-relaxed text-[#666666]">
                         {item.description}

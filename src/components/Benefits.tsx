@@ -17,7 +17,7 @@ export default function Benefits() {
           <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold-dark uppercase">
             {benefitsContent.eyebrow}
           </p>
-          <h2 className="mb-5 font-serif text-3xl text-[#1A1A1A] sm:text-4xl">
+          <h2 className="mb-5 font-serif text-3xl text-charcoal sm:text-4xl">
             {benefitsContent.heading}
           </h2>
           <p className="text-[#4a4a4a]">{benefitsContent.subtext}</p>
@@ -36,7 +36,7 @@ export default function Benefits() {
                 <div className="relative mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cream">
                   <Icon size={22} className="text-gold-dark" />
                 </div>
-                <h3 className="relative mb-2 font-serif text-lg text-[#1A1A1A]">
+                <h3 className="relative mb-2 font-serif text-lg text-charcoal">
                   {item.title}
                 </h3>
                 <p className="relative text-sm leading-relaxed text-[#666666]">

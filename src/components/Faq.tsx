@@ -16,7 +16,7 @@ export default function Faq() {
             <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold-dark uppercase">
               {faqContent.info.eyebrow}
             </p>
-            <h2 className="mb-6 font-serif text-3xl text-[#1A1A1A]">
+            <h2 className="mb-6 font-serif text-3xl text-charcoal">
               {faqContent.info.heading}
             </h2>
             <div className="mb-8 space-y-4">
@@ -55,7 +55,7 @@ export default function Faq() {
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                     >
-                      <span className="font-medium text-[#1A1A1A]">
+                      <span className="font-medium text-charcoal">
                         {item.question}
                       </span>
                       <ChevronDown

@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Approach() {
   return (
-    <section id="abordagem" className="bg-[#1A1A1A] py-20 lg:py-28">
+    <section id="abordagem" className="bg-dark py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
         <Reveal>
           <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold uppercase">
@@ -22,9 +22,15 @@ export default function Approach() {
           </div>
 
           <div className="mb-8 space-y-4">
-            {approachContent.highlights.map((item) => (
+            {approachContent.highlights.map((item, index) => (
               <div key={item.title}>
-                <p className="font-serif text-lg text-gold underline decoration-gold decoration-2 underline-offset-4">
+                <p
+                  className={`font-serif text-lg underline decoration-2 underline-offset-4 ${
+                    index % 2 === 0
+                      ? "text-gold decoration-gold"
+                      : "text-accent decoration-accent"
+                  }`}
+                >
                   {item.title}
                 </p>
                 <p className="text-sm text-white/60">{item.subtitle}</p>

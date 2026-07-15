@@ -44,7 +44,7 @@ export default function Header() {
               className="h-12 w-12 lg:hidden"
             />
             <span className="hidden flex-col leading-tight sm:flex">
-              <span className="font-serif text-lg text-[#1A1A1A]">
+              <span className="font-serif text-lg text-charcoal">
                 {siteConfig.professionalNameShort}
               </span>
               <span className="text-[11px] font-medium tracking-[0.15em] text-gold-dark uppercase">

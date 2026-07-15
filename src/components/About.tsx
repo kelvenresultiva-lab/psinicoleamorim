@@ -38,7 +38,7 @@ export default function About() {
           <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold-dark uppercase">
             {aboutContent.eyebrow}
           </p>
-          <h2 className="mb-6 font-serif text-3xl text-[#1A1A1A] sm:text-4xl">
+          <h2 className="mb-6 font-serif text-3xl text-charcoal sm:text-4xl">
             {aboutContent.heading}
           </h2>
           <div className="space-y-4">

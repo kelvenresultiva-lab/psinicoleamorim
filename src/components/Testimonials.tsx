@@ -22,7 +22,7 @@ export default function Testimonials() {
     <section id="depoimentos" className="bg-white pt-10 pb-20 lg:pt-14 lg:pb-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <Reveal>
-          <h2 className="mb-10 text-center font-serif text-3xl text-[#1A1A1A] sm:text-4xl">
+          <h2 className="mb-10 text-center font-serif text-3xl text-charcoal sm:text-4xl">
             {testimonialsContent.heading}
           </h2>
         </Reveal>
@@ -33,7 +33,7 @@ export default function Testimonials() {
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gold text-xl font-semibold text-white">
                 {testimonialsContent.summary.name.charAt(0)}
               </div>
-              <p className="font-serif text-lg text-[#1A1A1A]">
+              <p className="font-serif text-lg text-charcoal">
                 {testimonialsContent.summary.name}
               </p>
               <p className="text-sm text-[#666666]">
@@ -63,7 +63,7 @@ export default function Testimonials() {
                     <ReviewAvatar variant={review.avatar} />
                   </div>
                   <div>
-                    <p className="font-medium text-[#1A1A1A]">{review.name}</p>
+                    <p className="font-medium text-charcoal">{review.name}</p>
                     <p className="text-xs text-[#888888]">{review.timeAgo}</p>
                   </div>
                 </div>
