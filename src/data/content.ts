@@ -31,6 +31,7 @@ export const navLinks = [
   { label: "Benefícios", href: "#beneficios" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "FAQ", href: "#faq" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 export const headerCta = {
@@ -310,6 +311,7 @@ export const footerContent = {
     { label: "Sobre mim", href: "#sobre" },
     { label: "Serviços", href: "#consultorio" },
     { label: "Benefícios", href: "#beneficios" },
+    { label: "Blog", href: "/blog" },
   ],
   schedule: {
     heading: "Horário de Atendimento",
