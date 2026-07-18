@@ -2,18 +2,23 @@ import { NextResponse } from "next/server";
 import { createSessionCookieValue, SESSION_COOKIE_NAME, SESSION_MAX_AGE_SECONDS } from "@/lib/auth";
 
 export async function POST(request: Request) {
-  const { password } = await request.json();
+  const { email, password } = await request.json();
+  const adminEmail = process.env.ADMIN_EMAIL;
   const adminPassword = process.env.ADMIN_PASSWORD;
 
-  if (!adminPassword) {
+  if (!adminEmail || !adminPassword) {
     return NextResponse.json(
-      { error: "ADMIN_PASSWORD não configurada no servidor." },
+      { error: "ADMIN_EMAIL/ADMIN_PASSWORD não configuradas no servidor." },
       { status: 500 }
     );
   }
 
-  if (typeof password !== "string" || password !== adminPassword) {
-    return NextResponse.json({ error: "Senha incorreta." }, { status: 401 });
+  const emailMatches =
+    typeof email === "string" && email.trim().toLowerCase() === adminEmail.toLowerCase();
+  const passwordMatches = typeof password === "string" && password === adminPassword;
+
+  if (!emailMatches || !passwordMatches) {
+    return NextResponse.json({ error: "E-mail ou senha incorretos." }, { status: 401 });
   }
 
   const response = NextResponse.json({ ok: true });

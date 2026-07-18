@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 export default function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ export default function LoginForm() {
     const response = await fetch("/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ email, password }),
     });
 
     setLoading(false);
@@ -41,8 +42,20 @@ export default function LoginForm() {
     >
       <h1 className="mb-1 font-serif text-2xl text-charcoal">Área da Nicole</h1>
       <p className="mb-6 text-sm text-[#666666]">
-        Entre com a senha para gerenciar os posts do blog.
+        Entre com seu e-mail e senha para gerenciar os posts do blog.
       </p>
+
+      <label htmlFor="email" className="mb-2 block text-sm font-medium text-charcoal">
+        E-mail
+      </label>
+      <input
+        id="email"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        autoFocus
+        className="mb-4 w-full rounded-lg border border-black/10 px-4 py-2.5 text-sm outline-none focus:border-gold"
+      />
 
       <label htmlFor="password" className="mb-2 block text-sm font-medium text-charcoal">
         Senha
@@ -52,7 +65,6 @@ export default function LoginForm() {
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        autoFocus
         className="mb-4 w-full rounded-lg border border-black/10 px-4 py-2.5 text-sm outline-none focus:border-gold"
       />
 
