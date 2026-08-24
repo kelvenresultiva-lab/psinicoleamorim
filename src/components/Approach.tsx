@@ -13,11 +13,14 @@ export default function Approach() {
     <section id="abordagem" className="bg-surface py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
         <Reveal className="flex flex-col gap-6">
-          <p className="font-lato text-[15px] font-semibold tracking-[2.3px] text-gold-bright uppercase">
-            {approachContent.eyebrow}
-          </p>
+          <div>
+            <p className="text-[13px] font-semibold tracking-[0.22em] text-gold-bright uppercase">
+              {approachContent.eyebrow}
+            </p>
+            <span className="mt-3 block h-[2px] w-[50px] bg-gold-bright" />
+          </div>
 
-          <h2 className="font-serif text-3xl leading-tight font-semibold text-ink sm:text-4xl">
+          <h2 className="font-serif text-3xl leading-[0.95] font-medium tracking-[-0.025em] text-ink sm:text-4xl">
             {approachContent.title}
           </h2>
 
@@ -40,7 +43,7 @@ export default function Approach() {
           </div>
         </Reveal>
 
-        <Reveal delayMs={150} className="relative mx-auto w-full max-w-md">
+        <Reveal delayMs={150} className="relative mx-auto hidden w-full max-w-md lg:block">
           <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
               src={approachContent.image.src}

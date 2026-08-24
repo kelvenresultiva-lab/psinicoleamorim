@@ -42,8 +42,9 @@ export const headerCta = {
 export const heroContent = {
   title: "Nicole Amorim",
   subtitle: "PSICÓLOGA E PSICANALISTA",
-  taglineStart: "Um espaço seguro para você ser,",
-  taglineHighlight: "sentir e se cuidar.",
+  taglineStart: "Você sente que carrega tudo sozinha, mesmo quando não devia?",
+  taglineHighlight:
+    "Ofereço um espaço seguro e acolhedor para você entender o que sente, fortalecer sua autoestima e construir uma vida emocional mais equilibrada.",
   // Exibida só no mobile, no lugar dos bullets (que ficam só a partir do sm).
   mobileTagline:
     "A terapia é um convite para olhar para si com mais cuidado, compreender seus conflitos e descobrir novas possibilidades para a sua vida.",

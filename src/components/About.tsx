@@ -35,10 +35,11 @@ export default function About() {
         </Reveal>
 
         <Reveal delayMs={150}>
-          <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold-dark uppercase">
+          <p className="text-[13px] font-semibold tracking-[0.22em] text-gold-dark uppercase">
             {aboutContent.eyebrow}
           </p>
-          <h2 className="mb-6 font-serif text-3xl text-charcoal sm:text-4xl">
+          <span className="mt-3 mb-6 block h-[2px] w-[50px] bg-gold-dark" />
+          <h2 className="mb-6 font-serif text-3xl leading-[0.95] tracking-[-0.025em] text-charcoal sm:text-4xl">
             {aboutContent.heading}
           </h2>
           <div className="space-y-4">

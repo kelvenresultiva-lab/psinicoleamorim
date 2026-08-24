@@ -28,7 +28,7 @@ export default function Testimonials() {
     <section id="depoimentos" className="bg-white pt-10 pb-20 lg:pt-14 lg:pb-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <Reveal>
-          <h2 className="mb-8 text-center font-serif text-3xl text-charcoal sm:text-4xl">
+          <h2 className="mb-8 text-center font-serif text-3xl leading-[0.95] tracking-[-0.025em] text-charcoal sm:text-4xl">
             {testimonialsContent.heading}
           </h2>
 

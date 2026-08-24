@@ -6,10 +6,11 @@ export default function Benefits() {
     <section id="beneficios" className="bg-white pt-20 pb-10 lg:pt-28 lg:pb-14">
       <div className="mx-auto max-w-[1140px] px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="font-lato text-[15px] font-semibold tracking-[2.3px] text-gold-bright uppercase">
+          <p className="text-[13px] font-semibold tracking-[0.22em] text-gold-bright uppercase">
             {benefitsContent.eyebrow}
           </p>
-          <h2 className="mt-4 font-serif text-3xl leading-tight font-semibold text-ink sm:text-4xl">
+          <span className="mx-auto mt-3 block h-[2px] w-[50px] bg-gold-bright" />
+          <h2 className="mt-6 font-serif text-3xl leading-[0.95] font-medium tracking-[-0.025em] text-ink sm:text-4xl">
             {benefitsContent.heading}
           </h2>
           <p className="mt-4 font-heebo text-base leading-relaxed font-light text-muted">

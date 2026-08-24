@@ -16,10 +16,13 @@ export default function Faq() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:px-8">
         <Reveal>
           <div className="flex flex-col gap-5 rounded-2xl border border-line/70 p-8 lg:p-10">
-            <p className="font-lato text-[15px] font-semibold tracking-[2.3px] text-gold-bright uppercase">
-              {faqContent.info.eyebrow}
-            </p>
-            <h2 className="font-serif text-3xl leading-tight font-semibold text-ink">
+            <div>
+              <p className="text-[13px] font-semibold tracking-[0.22em] text-gold-bright uppercase">
+                {faqContent.info.eyebrow}
+              </p>
+              <span className="mt-3 block h-[2px] w-[50px] bg-gold-bright" />
+            </div>
+            <h2 className="font-serif text-3xl leading-[0.95] font-medium tracking-[-0.025em] text-ink">
               {faqContent.info.heading}
             </h2>
             <div className="space-y-4">
