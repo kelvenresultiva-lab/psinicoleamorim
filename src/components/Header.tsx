@@ -1,36 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Menu, X, CalendarDays } from "lucide-react";
 import { navLinks, siteConfig, headerCta, heroContent } from "@/data/content";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  // No mobile o header nasce transparente por cima da foto do Hero e vira
-  // sólido assim que a página rola — no desktop ele é sempre sólido.
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const solid = isScrolled || isOpen;
 
   return (
-    <header id="topo" className="fixed top-0 right-0 left-0 z-50 lg:sticky">
+    <header id="topo" className="sticky top-0 right-0 left-0 z-50">
       {/* O blur fica num wrapper interno (não no <header>) para que o
           overlay mobile abaixo, que usa position:fixed, não seja contido
           por esse backdrop-filter (filter cria um novo containing block
           para fixed, o que quebrava o overlay em tela cheia). */}
-      <div
-        className={`relative z-50 transition-colors duration-300 lg:bg-white/95 lg:shadow-sm lg:backdrop-blur-sm ${
-          solid ? "bg-white/95 shadow-sm backdrop-blur-sm" : "bg-transparent"
-        }`}
-      >
+      <div className="relative z-50 bg-white/95 shadow-sm backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#topo" className="flex items-center gap-3">
             <Image
@@ -42,14 +26,10 @@ export default function Header() {
               className="h-12 w-auto shrink-0 object-contain"
             />
             <span className="flex flex-col leading-tight">
-              <span
-                className={`font-serif text-lg transition-colors ${solid ? "text-charcoal" : "text-white"}`}
-              >
+              <span className="font-serif text-lg text-charcoal">
                 {siteConfig.professionalNameShort}
               </span>
-              <span
-                className={`text-[11px] font-medium tracking-[0.15em] uppercase transition-colors ${solid ? "text-gold-dark" : "text-gold"}`}
-              >
+              <span className="text-[11px] font-medium tracking-[0.15em] text-gold-dark uppercase">
                 {heroContent.subtitle}
               </span>
             </span>
@@ -82,7 +62,7 @@ export default function Header() {
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((prev) => !prev)}
-            className={`transition-colors lg:hidden ${solid ? "text-[#333333]" : "text-white"}`}
+            className="text-[#333333] lg:hidden"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

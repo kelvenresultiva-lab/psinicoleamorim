@@ -9,34 +9,24 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function ContactBar() {
   return (
-    <section id="contato" className="bg-dark py-16 lg:py-20">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-          {contactBarContent.map((item) => {
-            const Icon = iconMap[item.icon];
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.icon === "map-pin" ? "_blank" : undefined}
-                rel={item.icon === "map-pin" ? "noopener noreferrer" : undefined}
-                className="group flex items-center gap-4 px-6 py-8 transition-colors hover:bg-white/5 sm:px-8"
-              >
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold transition-colors group-hover:bg-gold group-hover:text-white">
-                  <Icon size={22} />
-                </span>
-                <div className="min-w-0">
-                  <p className="text-xs font-semibold tracking-[0.15em] text-gold uppercase">
-                    {item.label}
-                  </p>
-                  <p className="mt-1 text-sm leading-snug text-white/90">
-                    {item.value}
-                  </p>
-                </div>
-              </a>
-            );
-          })}
-        </div>
+    <section id="contato" className="relative z-10 -mt-[66px] bg-graphite">
+      <div className="grid grid-cols-1 sm:grid-cols-3">
+        {contactBarContent.map((item) => {
+          const Icon = iconMap[item.icon];
+          return (
+            <a
+              key={item.label}
+              href={item.href}
+              target={item.icon === "map-pin" ? "_blank" : undefined}
+              rel={item.icon === "map-pin" ? "noopener noreferrer" : undefined}
+              className="flex flex-col items-center gap-2 border-line/20 px-6 py-10 text-center transition-colors hover:bg-white/5 sm:border-l sm:first:border-l-0"
+            >
+              <Icon size={30} strokeWidth={1.5} className="text-white" />
+              <p className="mt-3 font-serif text-lg font-semibold text-white">{item.label}</p>
+              <p className="font-heebo text-base text-white/70">{item.value}</p>
+            </a>
+          );
+        })}
       </div>
     </section>
   );

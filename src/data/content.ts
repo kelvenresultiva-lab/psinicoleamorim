@@ -144,8 +144,6 @@ export const galleryContent = {
 export const testimonialsContent = {
   heading: "O que dizem sobre meu trabalho:",
   summary: {
-    name: siteConfig.professionalNameShort,
-    subtitle: "Psicóloga | Atendimento Presencial e Online",
     rating: 5.0,
     reviewCount: 87,
   },
@@ -174,35 +172,26 @@ export const testimonialsContent = {
   ],
 } as const;
 
+// ATENÇÃO: texto e barras de progresso copiados do site da Miriam Souza
+// como placeholder temporário, a pedido do cliente — ele pretende trocar
+// pelo texto real da Nicole depois. O "+100" também é um valor provisório
+// (a Nicole confirmou "mais de 100 atendimentos", sem número exato ainda).
 export const approachContent = {
   eyebrow: "COMO FUNCIONA MEU TRABALHO",
-  heading: "Análise pessoal e terapia",
-  headingHighlight: "de casal",
+  title: "Sua primeira sessão",
   paragraphs: [
-    {
-      icon: "user",
-      text: "Parto da escuta cuidadosa da história de cada paciente, respeitando seu tempo e particularidades.",
-    },
-    {
-      icon: "heart-handshake",
-      text: "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento e transformação genuína.",
-    },
+    "A primeira sessão é um momento de acolhimento, escuta e avaliação da sua história, suas demandas e seus objetivos — permitindo a construção de um plano terapêutico individualizado, feito sob medida para você.",
+    "O acompanhamento segue com sessões regulares, com escuta qualificada e direcionamento terapêutico de acordo com suas necessidades, promovendo autoconhecimento e mais qualidade de vida ao longo do tempo.",
   ],
-  highlights: [
-    {
-      icon: "armchair",
-      title: "Ambiente Seguro",
-      description: "Sigilo e acolhimento em cada sessão. Um espaço onde você pode ser quem é.",
-    },
-    {
-      icon: "sprout",
-      title: "Resultados Reais",
-      description: "Acompanhamento comprometido com sua evolução e bem-estar emocional.",
-    },
+  progressBars: [
+    { label: "Escuta acolhedora", value: 100 },
+    { label: "Compromisso com o processo", value: 97 },
   ],
-  ctaLabel: "VAMOS CONVERSAR?",
-  secondaryCta: { label: "Agende sua sessão", href: "#contato" },
-  badge: "COMPROMISSO EM CADA SESSÃO",
+  ctaLabel: "Agende sua primeira sessão",
+  stat: {
+    value: "+100",
+    label: "Atendimentos realizados",
+  },
   image: {
     src: "/images/abordagem-foto.jpg",
     alt: "Nicole Amorim sorrindo, lendo um livro em ambiente acolhedor",
@@ -217,28 +206,24 @@ export const benefitsContent = {
   items: [
     {
       number: "01",
-      icon: "heart-pulse",
       title: "Controle das emoções",
       description:
         "Desenvolva maior consciência e equilíbrio emocional diante dos desafios do dia a dia.",
     },
     {
       number: "02",
-      icon: "users-round",
       title: "Melhora nas relações",
       description:
         "Construa vínculos mais saudáveis com família, amigos e parceiros a partir do autoconhecimento.",
     },
     {
       number: "03",
-      icon: "shield-check",
       title: "Diminuição da agressividade",
       description:
         "Compreenda a origem de reações impulsivas e aprenda formas mais saudáveis de lidar com elas.",
     },
     {
       number: "04",
-      icon: "moon",
       title: "Diminuição da insônia",
       description:
         "Alivie a ansiedade e os pensamentos acelerados que impactam diretamente a qualidade do sono.",

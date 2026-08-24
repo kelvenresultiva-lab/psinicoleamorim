@@ -1,51 +1,55 @@
-import { HeartPulse, UsersRound, ShieldCheck, Moon, type LucideIcon } from "lucide-react";
 import { benefitsContent } from "@/data/content";
 import Reveal from "./Reveal";
 
-const iconMap: Record<string, LucideIcon> = {
-  "heart-pulse": HeartPulse,
-  "users-round": UsersRound,
-  "shield-check": ShieldCheck,
-  moon: Moon,
-};
-
 export default function Benefits() {
   return (
-    <section id="beneficios" className="bg-white py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-        <Reveal>
-          <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold-dark uppercase">
+    <section id="beneficios" className="bg-white pt-20 pb-10 lg:pt-28 lg:pb-14">
+      <div className="mx-auto max-w-[1140px] px-6">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <p className="font-lato text-[15px] font-semibold tracking-[2.3px] text-gold-bright uppercase">
             {benefitsContent.eyebrow}
           </p>
-          <h2 className="mb-5 font-serif text-3xl text-charcoal sm:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl leading-tight font-semibold text-ink sm:text-4xl">
             {benefitsContent.heading}
           </h2>
-          <p className="text-[#4a4a4a]">{benefitsContent.subtext}</p>
+          <p className="mt-4 font-heebo text-base leading-relaxed font-light text-muted">
+            {benefitsContent.subtext}
+          </p>
         </Reveal>
-      </div>
 
-      <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-8 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-        {benefitsContent.items.map((item, index) => {
-          const Icon = iconMap[item.icon];
-          return (
-            <Reveal key={item.number} delayMs={index * 100}>
-              <div className="relative rounded-2xl border border-[#EEEEEE] p-6">
-                <span className="pointer-events-none absolute top-2 right-4 font-serif text-5xl text-cream-dark">
-                  {item.number}
-                </span>
-                <div className="relative mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cream">
-                  <Icon size={22} className="text-gold-dark" />
-                </div>
-                <h3 className="relative mb-2 font-serif text-lg text-charcoal">
+        <div className="mt-14 grid grid-cols-2 items-start gap-x-4 gap-y-10 sm:mt-20 sm:gap-x-8 sm:gap-y-12 lg:grid-cols-4">
+          {benefitsContent.items.map((item, index) => {
+            const numberFirst = index % 2 === 0;
+            const number = (
+              <span
+                key="number"
+                className="block font-heebo text-6xl leading-none font-semibold text-white [text-shadow:0px_0px_1px_#000000] sm:text-7xl lg:text-[96px]"
+              >
+                {item.number}
+              </span>
+            );
+            const text = (
+              <div key="text">
+                <h3 className="font-serif text-base font-semibold text-ink sm:text-lg">
                   {item.title}
                 </h3>
-                <p className="relative text-sm leading-relaxed text-[#666666]">
+                <p className="mt-2 font-heebo text-xs leading-relaxed font-light text-muted sm:text-sm">
                   {item.description}
                 </p>
               </div>
-            </Reveal>
-          );
-        })}
+            );
+
+            return (
+              <Reveal
+                key={item.number}
+                delayMs={index * 100}
+                className="flex flex-col items-center gap-3 text-center sm:gap-4"
+              >
+                {numberFirst ? [number, text] : [text, number]}
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

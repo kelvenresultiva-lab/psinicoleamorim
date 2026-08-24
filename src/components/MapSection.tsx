@@ -6,7 +6,8 @@ export default function MapSection() {
       <iframe
         src={siteConfig.mapsEmbedUrl}
         width="100%"
-        height="450"
+        height="500"
+        className="grayscale"
         style={{ border: 0, display: "block" }}
         allowFullScreen
         loading="lazy"
