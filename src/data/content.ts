@@ -9,8 +9,7 @@ export const siteConfig = {
   brand: "AFETO",
   professionalName: "Nicole Amorim",
   professionalNameShort: "Nicole Amorim",
-  crp: "CRP-MG 04/78461",
-  title: "Psicóloga Clínica",
+  title: "Psicanalista Clínica",
   city: "São João del-Rei - MG",
   phoneDisplay: "(32) 99199-3814",
   phoneWhatsapp: "5532991993814",
@@ -41,23 +40,22 @@ export const headerCta = {
 
 export const heroContent = {
   title: "Nicole Amorim",
-  subtitle: "PSICÓLOGA E PSICANALISTA",
-  taglineStart: "Você sente que carrega tudo sozinha, mesmo quando não devia?",
-  taglineHighlight:
-    "Ofereço um espaço seguro e acolhedor para você entender o que sente, fortalecer sua autoestima e construir uma vida emocional mais equilibrada.",
+  subtitle: "PSICANALISTA",
+  taglineStart: "Você não precisa",
+  taglineHighlight: "carregar tudo sozinha.",
+  taglineDescription:
+    "Um espaço de escuta para compreender o que você sente, fortalecer sua autoestima e construir relações mais leves e conscientes.",
   // Exibida só no mobile, no lugar dos bullets (que ficam só a partir do sm).
   mobileTagline:
-    "A terapia é um convite para olhar para si com mais cuidado, compreender seus conflitos e descobrir novas possibilidades para a sua vida.",
-  bullets: [
-    "Atendimento individual e de casal.",
-    "Abordagem psicanalítica.",
-    "Atendimento Presencial (São João Del Rei) e on-line.",
-  ],
+    "Um espaço de escuta e acolhimento para compreender seus conflitos e encontrar novos caminhos.",
+  bullets: ["Atendimento individual e de casal", "Presencial em São João del-Rei", "Online"],
   primaryCta: {
-    label: "MAIS INFORMAÇÕES",
+    // No mobile o rótulo é mais direto; no desktop (lg) usamos label abaixo.
+    mobileLabel: "AGENDAR ATENDIMENTO",
+    label: "AGENDAR UMA CONVERSA",
     href: `https://wa.me/${siteConfig.phoneWhatsapp}`,
   },
-  secondaryCta: { label: "SOBRE MIM", href: "#sobre" },
+  secondaryCta: { mobileLabel: "SOBRE MIM", label: "Conhecer meu trabalho", href: "#sobre" },
   // Foto composta especificamente para o fundo único do Hero: parede lisa
   // à esquerda (onde o texto fica) e a Nicole nítida à direita — não precisa
   // de gradiente escuro artificial por cima, a própria foto já tem o contraste.
@@ -72,9 +70,9 @@ export const heroContent = {
 
 export const introContent = {
   heading: "Um espaço para",
-  headingHighlight: "cuidar de si e das suas relações.",
+  headingHighlight: "pensar sobre si e suas relações.",
   paragraph:
-    "A terapia é um convite para desacelerar, ouvir a si mesmo e compreender o que te move. Aqui, você encontra um ambiente seguro e livre de julgamentos para elaborar emoções, melhorar seus relacionamentos e viver com mais equilíbrio e sentido.",
+    "O processo terapêutico é uma oportunidade de refletir sobre a vida e seu cotidiano, uma pausa para repensar o que costuma funcionar no automático e um convite para criar seu próprio modo de navegar pelo mundo.",
   items: [
     {
       icon: "message-heart",
@@ -101,11 +99,11 @@ export const aboutContent = {
     alt: "Retrato de Nicole Amorim",
   },
   formationIcon: "graduation-cap",
-  formationText: "Psicóloga com especialização em Psicologia e Psicanálise.",
+  formationText: "Psicanalista formada pela Universidade Federal de São João del-Rei (UFSJ).",
   eyebrow: "OLÁ, SOU NICOLE",
   heading: "Uma trajetória dedicada ao cuidado emocional",
   paragraphs: [
-    "Atendo adolescentes, adultos e casais em processos de análise pessoal, com foco em quem deseja se conhecer melhor e transformar questões que incomodam — não trabalho com uma área voltada a diagnósticos específicos.",
+    "Atendo adolescentes, adultos e casais, a partir do enfoque psicanalítico, que coloca em voga seus desejos pessoais, seus conflitos e seu modo de se relacionar com o mundo.",
     "Acredito que a terapia não se limita a aliviar o sofrimento, mas também a compreender como ele se constrói. Meu trabalho busca oferecer um espaço de escuta em que cada pessoa possa se implicar em sua própria história, reconhecendo padrões, conflitos e formas de se relacionar consigo mesma e com os outros.",
     "Mais do que oferecer respostas prontas, procuro construir, junto ao paciente, novas formas de viver sua própria história, sempre a partir da abordagem psicanalítica.",
     "Ofereço uma escuta atenta para ajudar cada pessoa a construir um saber próprio sobre sua história e diminuir o sofrimento diante dos conflitos da vida.",

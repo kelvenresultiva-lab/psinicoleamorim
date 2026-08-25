@@ -1,20 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Menu, X, CalendarDays } from "lucide-react";
 import { navLinks, siteConfig, headerCta, heroContent } from "@/data/content";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  // No mobile o header nasce transparente por cima da foto do Hero (que é
+  // clara, por isso o texto continua escuro mesmo transparente) e vira
+  // sólido assim que a página rola, pra não ficar ilegível sobre outras
+  // seções. No desktop ele é sempre sólido.
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const solid = isScrolled || isOpen;
 
   return (
-    <header id="topo" className="sticky top-0 right-0 left-0 z-50">
+    <header id="topo" className="fixed top-0 right-0 left-0 z-50 lg:sticky">
       {/* O blur fica num wrapper interno (não no <header>) para que o
           overlay mobile abaixo, que usa position:fixed, não seja contido
           por esse backdrop-filter (filter cria um novo containing block
           para fixed, o que quebrava o overlay em tela cheia). */}
-      <div className="relative z-50 bg-white/95 shadow-sm backdrop-blur-sm">
+      <div
+        className={`relative z-50 transition-colors duration-300 lg:bg-white/95 lg:shadow-sm lg:backdrop-blur-sm ${
+          solid ? "bg-cream shadow-sm backdrop-blur-sm" : "bg-transparent"
+        }`}
+      >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#topo" className="flex items-center gap-3">
             <Image

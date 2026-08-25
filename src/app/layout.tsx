@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   title: `${siteConfig.professionalName} | ${siteConfig.title} em ${siteConfig.city}`,
   description: `Psicoterapia para adultos, casais e famílias com abordagem psicanalítica. Atendimento presencial em ${siteConfig.city} e online. Agende uma conversa.`,
   keywords: [
-    "psicóloga",
-    "psicóloga clínica",
+    "psicanalista",
+    "psicanalista clínica",
     "psicoterapia",
     "terapia online",
     "São João del-Rei",

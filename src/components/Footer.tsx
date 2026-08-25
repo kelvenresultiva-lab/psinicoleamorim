@@ -14,7 +14,7 @@ export default function Footer() {
               {siteConfig.professionalName}
             </p>
             <p className="text-[13px] font-semibold tracking-[0.22em] text-gold uppercase">
-              {siteConfig.title} — {siteConfig.crp}
+              {siteConfig.title}
             </p>
             <a
               href={siteConfig.instagramUrl}
