@@ -17,7 +17,7 @@ const desktopScrimStyle = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[720px] overflow-hidden bg-cream sm:min-h-[780px] lg:min-h-0 lg:aspect-[1898/887] lg:w-full lg:bg-[#080706]">
+    <section className="relative min-h-[820px] overflow-hidden bg-cream sm:min-h-[880px] lg:min-h-0 lg:aspect-[1898/887] lg:w-full lg:bg-[#080706]">
       <Image
         src={heroContent.image.mobileSrc}
         alt={heroContent.image.alt}
@@ -92,7 +92,7 @@ export default function Hero() {
                 {heroContent.bullets.join("  ·  ")}
               </p>
 
-              <div className="order-5 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 lg:order-7 lg:w-auto lg:flex-row lg:flex-wrap lg:items-center lg:justify-start lg:gap-6">
+              <div className="order-5 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 lg:order-7 lg:w-auto lg:flex-row lg:flex-wrap lg:items-center lg:justify-start lg:gap-6">
                 <a
                   href={heroContent.primaryCta.href}
                   target="_blank"
