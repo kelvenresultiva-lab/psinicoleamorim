@@ -17,7 +17,7 @@ const desktopScrimStyle = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[880px] overflow-hidden bg-cream sm:min-h-[940px] lg:min-h-0 lg:aspect-[1898/887] lg:w-full lg:bg-[#080706]">
+    <section className="relative min-h-[720px] overflow-hidden bg-cream sm:min-h-[780px] lg:min-h-0 lg:aspect-[1898/887] lg:w-full lg:bg-[#080706]">
       <Image
         src={heroContent.image.mobileSrc}
         alt={heroContent.image.alt}
@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-white/90 via-white/50 to-transparent lg:hidden" />
       <div className="pointer-events-none absolute inset-0 hidden lg:block" style={desktopScrimStyle} />
 
-      <div className="absolute inset-0 flex flex-col justify-end px-6 pt-24 pb-2 sm:pb-4 lg:justify-start lg:px-0 lg:pt-28 lg:pb-0">
+      <div className="absolute inset-0 flex flex-col justify-end px-6 pt-24 pb-8 sm:pb-10 lg:justify-start lg:px-0 lg:pt-28 lg:pb-0">
         <div className="mx-auto w-full max-w-7xl lg:mx-auto lg:max-w-[1898px] lg:px-[13vw]">
           <Reveal>
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
