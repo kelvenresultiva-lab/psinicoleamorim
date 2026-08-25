@@ -97,7 +97,7 @@ export default function Hero() {
                   href={heroContent.primaryCta.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover-float inline-flex w-full items-center justify-center gap-2 rounded-full border border-transparent bg-gold-bright px-8 py-3 font-lato text-sm font-normal tracking-[1.3px] text-white uppercase transition-colors duration-300 hover:border-gold-bright hover:bg-transparent hover:text-gold-bright sm:w-auto lg:w-auto lg:rounded-tl-md lg:rounded-tr-md lg:rounded-br-md lg:rounded-bl-md lg:bg-[#C55F37] lg:px-7 lg:py-3.5 lg:text-[13px] lg:tracking-[1.5px] lg:hover:border-[#C55F37] lg:hover:bg-transparent lg:hover:text-[#C55F37]"
+                  className="hover-float inline-flex w-[85%] items-center justify-center gap-2 rounded-full border border-transparent bg-gold-bright px-8 py-3 font-lato text-sm font-normal tracking-[1.3px] text-white uppercase transition-colors duration-300 hover:border-gold-bright hover:bg-transparent hover:text-gold-bright sm:w-auto lg:w-auto lg:rounded-tl-md lg:rounded-tr-md lg:rounded-br-md lg:rounded-bl-md lg:bg-[#C55F37] lg:px-7 lg:py-3.5 lg:text-[13px] lg:tracking-[1.5px] lg:hover:border-[#C55F37] lg:hover:bg-transparent lg:hover:text-[#C55F37]"
                 >
                   <span className="lg:hidden">{heroContent.primaryCta.mobileLabel}</span>
                   <span className="hidden lg:inline">{heroContent.primaryCta.label}</span>
@@ -108,7 +108,7 @@ export default function Hero() {
                 </a>
                 <a
                   href={heroContent.secondaryCta.href}
-                  className="hover-float inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold-bright bg-white px-8 py-3 font-lato text-sm font-normal tracking-[1.3px] text-ink uppercase transition-colors duration-300 hover:bg-gold-bright hover:text-white sm:w-auto lg:w-auto lg:justify-start lg:border-0 lg:bg-transparent lg:p-0 lg:font-heebo lg:text-[15px] lg:font-normal lg:tracking-normal lg:text-[#C95C35] lg:normal-case lg:underline lg:decoration-[#C95C35]/40 lg:underline-offset-4 lg:hover:bg-transparent lg:hover:text-[#C95C35]">
+                  className="hover-float inline-flex w-[85%] items-center justify-center gap-2 rounded-full border border-gold-bright bg-white px-8 py-3 font-lato text-sm font-normal tracking-[1.3px] text-ink uppercase transition-colors duration-300 hover:bg-gold-bright hover:text-white sm:w-auto lg:w-auto lg:justify-start lg:border-0 lg:bg-transparent lg:p-0 lg:font-heebo lg:text-[15px] lg:font-normal lg:tracking-normal lg:text-[#C95C35] lg:normal-case lg:underline lg:decoration-[#C95C35]/40 lg:underline-offset-4 lg:hover:bg-transparent lg:hover:text-[#C95C35]">
                   <span className="lg:hidden">{heroContent.secondaryCta.mobileLabel}</span>
                   <span className="hidden lg:inline">{heroContent.secondaryCta.label}</span>
                   <User size={14} className="lg:hidden" />
