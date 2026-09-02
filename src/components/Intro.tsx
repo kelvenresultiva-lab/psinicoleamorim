@@ -14,7 +14,7 @@ export default function Intro() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16 lg:py-20">
         <div className="flex flex-col gap-10 lg:flex-row lg:gap-0 lg:divide-x lg:divide-gold/25">
           <Reveal className="lg:w-[22%] lg:pr-10">
-            <h2 className="font-serif text-3xl leading-[0.95] tracking-[-0.025em] text-charcoal lg:text-4xl">
+            <h2 className="font-serif text-3xl leading-snug text-charcoal lg:text-4xl">
               {introContent.heading}{" "}
               <em className="text-gold italic">{introContent.headingHighlight}</em>
             </h2>
@@ -30,15 +30,12 @@ export default function Intro() {
               const Icon = iconMap[item.icon];
               return (
                 <Reveal key={item.title} delayMs={(index + 1) * 120}>
-                  <div className="flex flex-col items-center gap-2 rounded-lg bg-white p-5 text-center shadow-sm sm:block sm:bg-transparent sm:p-0 sm:shadow-none">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold/10 text-gold sm:h-16 sm:w-16 sm:mx-auto sm:mb-4">
-                      <Icon size={20} strokeWidth={1.75} className="sm:hidden" />
-                      <Icon size={28} strokeWidth={1.75} className="hidden sm:block" />
+                  <div className="flex items-center gap-5 rounded-2xl bg-white p-6 shadow-sm sm:block sm:bg-transparent sm:p-0 sm:text-center sm:shadow-none">
+                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gold/10 text-gold sm:mx-auto sm:mb-4">
+                      <Icon size={28} strokeWidth={1.75} />
                     </div>
-                    <div>
-                      <h3 className="font-serif text-lg font-semibold text-charcoal sm:font-normal">
-                        {item.title}
-                      </h3>
+                    <div className="border-l border-gold/30 pl-5 sm:border-0 sm:pl-0">
+                      <h3 className="font-serif text-lg text-charcoal">{item.title}</h3>
                       <span className="mt-2 mb-3 hidden h-px w-8 bg-gold sm:mx-auto sm:block" />
                       <p className="text-sm leading-relaxed text-[#666666]">
                         {item.description}

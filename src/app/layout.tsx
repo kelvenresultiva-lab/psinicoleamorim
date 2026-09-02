@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Poppins, Lato, Heebo } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/data/content";
 
@@ -13,23 +13,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-// Usadas nas seções a partir de "Como funciona meu trabalho" (o mesmo
-// sistema tipográfico do site da Miriam Souza: Lato para rótulos/botões,
-// Heebo para corpo de texto).
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  display: "swap",
-});
-
-const heebo = Heebo({
-  variable: "--font-heebo",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
   display: "swap",
 });
 
@@ -76,10 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${playfair.variable} ${poppins.variable} ${lato.variable} ${heebo.variable}`}
-    >
+    <html lang="pt-BR" className={`${playfair.variable} ${poppins.variable}`}>
       <body className="min-h-full flex flex-col font-sans antialiased bg-white text-[#333333]">
         {children}
       </body>

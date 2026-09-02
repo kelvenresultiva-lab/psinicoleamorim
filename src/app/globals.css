@@ -12,18 +12,6 @@
   --color-charcoal: #231824;
   --color-dark: #3a2732;
   --color-accent: #4a56c8;
-
-  /* Paleta portada do site da Miriam Souza, usada só da seção "Como
-     funciona meu trabalho" para baixo (Approach, Benefits, Faq,
-     MapSection, ContactBar, Footer). Nomes distintos da paleta acima
-     de propósito, para não colidir com as cores usadas no resto do site. */
-  --color-ink: #141414;
-  --color-gold-bright: #4d3527;
-  --color-muted: #7a7a7a;
-  --color-line: #d2d2d2;
-  --color-gray: #b0b0b0;
-  --color-surface: #f2f2f2;
-  --color-graphite: #1a1a1a;
 }
 
 @theme inline {
@@ -36,17 +24,8 @@
   --color-charcoal: var(--color-charcoal);
   --color-dark: var(--color-dark);
   --color-accent: var(--color-accent);
-  --color-ink: var(--color-ink);
-  --color-gold-bright: var(--color-gold-bright);
-  --color-muted: var(--color-muted);
-  --color-line: var(--color-line);
-  --color-gray: var(--color-gray);
-  --color-surface: var(--color-surface);
-  --color-graphite: var(--color-graphite);
   --font-sans: var(--font-poppins);
   --font-serif: var(--font-playfair);
-  --font-lato: var(--font-lato);
-  --font-heebo: var(--font-heebo);
 }
 
 html {
@@ -76,17 +55,6 @@ body {
     transform: none;
     transition: none;
   }
-}
-
-/* Botão "levanta" no hover — usado nas seções com a paleta portada do
-   site da Miriam Souza (ver comentário em :root acima). */
-.hover-float {
-  transition: transform 0.3s ease-out;
-}
-
-.hover-float:hover,
-.hover-float:focus-visible {
-  transform: translateY(-8px);
 }
 
 /* Estilos do conteúdo em markdown dos posts do blog (react-markdown não

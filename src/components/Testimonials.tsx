@@ -1,22 +1,16 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { testimonialsContent } from "@/data/content";
 import Reveal from "./Reveal";
 import ReviewAvatar from "./ReviewAvatar";
 
-// Âmbar usado em avaliações com estrelas (convenção comum a vários sites
-// de review, não é uma cor exclusiva de marca) — só nessa seção, para dar
-// a leitura visual de "avaliação" que o resto da paleta (laranja) não tem.
-const STAR_COLOR = "#FBBC04";
-
-function Stars({ count, size = 16 }: { count: number; size?: number }) {
+function Stars({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5" aria-label={`${count} de 5 estrelas`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          size={size}
-          style={i < count ? { fill: STAR_COLOR, color: STAR_COLOR } : undefined}
-          className={i < count ? "" : "text-[#DADCE0]"}
+          size={16}
+          className={i < count ? "fill-gold text-gold" : "text-[#D9D0BE]"}
         />
       ))}
     </div>
@@ -28,51 +22,53 @@ export default function Testimonials() {
     <section id="depoimentos" className="bg-white pt-10 pb-20 lg:pt-14 lg:pb-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <Reveal>
-          <h2 className="mb-8 text-center font-serif text-3xl leading-[0.95] tracking-[-0.025em] text-charcoal sm:text-4xl">
+          <h2 className="mb-10 text-center font-serif text-3xl text-charcoal sm:text-4xl">
             {testimonialsContent.heading}
           </h2>
-
-          <div className="mx-auto mb-10 flex max-w-md flex-col items-center gap-1 text-center">
-            <div className="flex items-center gap-3">
-              <span className="font-sans text-4xl font-semibold text-[#202124]">
-                {testimonialsContent.summary.rating.toFixed(1)}
-              </span>
-              <div className="flex flex-col items-start gap-1">
-                <Stars count={5} size={20} />
-                <span className="text-xs text-[#70757a]">
-                  {testimonialsContent.summary.reviewCount} avaliações
-                </span>
-              </div>
-            </div>
-          </div>
         </Reveal>
 
-        <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden">
+        <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
+          <Reveal className="w-[80%] shrink-0 snap-center sm:w-auto">
+            <div className="flex h-full flex-col items-center gap-3 rounded-2xl bg-cream p-6 text-center shadow-sm">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gold text-xl font-semibold text-white">
+                {testimonialsContent.summary.name.charAt(0)}
+              </div>
+              <p className="font-serif text-lg text-charcoal">
+                {testimonialsContent.summary.name}
+              </p>
+              <p className="text-sm text-[#666666]">
+                {testimonialsContent.summary.subtitle}
+              </p>
+              <div className="flex items-center gap-2">
+                <Stars count={5} />
+                <span className="text-sm font-semibold text-[#333333]">
+                  {testimonialsContent.summary.rating.toFixed(1)}
+                </span>
+              </div>
+              <p className="text-xs text-[#888888]">
+                {testimonialsContent.summary.reviewCount} avaliações
+              </p>
+            </div>
+          </Reveal>
+
           {testimonialsContent.reviews.map((review, index) => (
             <Reveal
               key={review.name}
-              delayMs={index * 120}
+              delayMs={(index + 1) * 120}
               className="w-[80%] shrink-0 snap-center sm:w-auto"
             >
-              <div className="relative h-full rounded-lg border border-black/10 bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.06)]">
-                <Quote
-                  size={28}
-                  className="absolute top-5 right-5 text-black/5"
-                  fill="currentColor"
-                />
-                <div className="mb-3 flex items-center gap-3">
-                  <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full bg-[#F8F9FA]">
+              <div className="h-full rounded-2xl bg-cream p-6 shadow-sm">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full bg-white">
                     <ReviewAvatar variant={review.avatar} />
                   </div>
-                  <div className="min-w-0">
-                    <p className="truncate font-sans text-sm font-medium text-[#202124]">
-                      {review.name}
-                    </p>
-                    <p className="text-xs text-[#70757a]">{review.timeAgo}</p>
+                  <div>
+                    <p className="font-medium text-charcoal">{review.name}</p>
+                    <p className="text-xs text-[#888888]">{review.timeAgo}</p>
                   </div>
                 </div>
                 <Stars count={review.rating} />
-                <p className="mt-3 line-clamp-4 font-sans text-sm leading-relaxed text-[#3c4043]">
+                <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-[#4a4a4a]">
                   {review.text}
                 </p>
               </div>

@@ -7,11 +7,10 @@ export default function Gallery() {
     <section id="consultorio" className="bg-white pt-20 pb-10 lg:pt-28 lg:pb-14">
       <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
         <Reveal>
-          <p className="text-[13px] font-semibold tracking-[0.22em] text-gold-dark uppercase">
+          <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-gold-dark uppercase">
             {galleryContent.eyebrow}
           </p>
-          <span className="mx-auto mt-3 mb-5 block h-[2px] w-[50px] bg-gold-dark" />
-          <h2 className="mb-5 font-serif text-3xl leading-[0.95] tracking-[-0.025em] text-charcoal sm:text-4xl">
+          <h2 className="mb-5 font-serif text-3xl text-charcoal sm:text-4xl">
             {galleryContent.heading}
           </h2>
           <p className="text-[#4a4a4a]">{galleryContent.subtext}</p>
