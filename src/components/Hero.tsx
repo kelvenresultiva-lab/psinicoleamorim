@@ -32,11 +32,11 @@ export default function Hero() {
       <div className="relative mx-auto flex min-h-[880px] max-w-7xl flex-col justify-end px-6 pt-24 pb-16 sm:min-h-[940px] sm:pb-20 lg:min-h-[860px] lg:justify-center lg:px-16 lg:pb-36">
         <Reveal>
           <div className="flex flex-col">
-            <p className="order-2 mb-6 text-sm font-medium tracking-[0.2em] text-gold uppercase lg:order-1 lg:mb-3">
+            <p className="order-2 mb-6 text-center text-sm font-medium tracking-[0.2em] text-gold uppercase lg:order-1 lg:mb-3 lg:text-left">
               {heroContent.subtitle}
             </p>
 
-            <h1 className="order-1 mb-2 max-w-2xl font-serif text-4xl leading-tight text-white sm:text-6xl lg:order-2 lg:mb-6 lg:text-7xl">
+            <h1 className="order-1 mb-2 max-w-2xl text-center font-serif text-4xl leading-tight text-white sm:text-6xl lg:order-2 lg:mb-6 lg:text-left lg:text-7xl">
               {heroFirstName}
               {heroLastName && (
                 <>
@@ -56,7 +56,7 @@ export default function Hero() {
               <Heart size={18} className="inline-block text-gold align-middle" />
             </p>
 
-            <p className="order-4 mb-10 max-w-md text-base leading-relaxed text-white/90 sm:hidden">
+            <p className="order-4 mb-10 max-w-md text-center text-base leading-relaxed text-white/90 sm:hidden">
               {heroContent.mobileTagline}
             </p>
 

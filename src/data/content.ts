@@ -187,17 +187,9 @@ export const approachContent = {
       text: "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento e transformação genuína.",
     },
   ],
-  highlights: [
-    {
-      icon: "armchair",
-      title: "Ambiente Seguro",
-      description: "Sigilo e acolhimento em cada sessão. Um espaço onde você pode ser quem é.",
-    },
-    {
-      icon: "sprout",
-      title: "Resultados Reais",
-      description: "Acompanhamento comprometido com sua evolução e bem-estar emocional.",
-    },
+  progressBars: [
+    { label: "Escuta acolhedora", value: 100 },
+    { label: "Compromisso com o processo", value: 97 },
   ],
   ctaLabel: "VAMOS CONVERSAR?",
   secondaryCta: { label: "Agende sua sessão", href: "#contato" },

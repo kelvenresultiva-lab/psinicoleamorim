@@ -1,14 +1,7 @@
 import Image from "next/image";
-import {
-  User,
-  HeartHandshake,
-  Armchair,
-  Sprout,
-  Heart,
-  CalendarDays,
-  type LucideIcon,
-} from "lucide-react";
+import { User, HeartHandshake, Heart, CalendarDays, type LucideIcon } from "lucide-react";
 import { approachContent } from "@/data/content";
+import ProgressBar from "./ProgressBar";
 import Reveal from "./Reveal";
 import WhatsappIcon from "./WhatsappIcon";
 
@@ -17,25 +10,20 @@ const paragraphIconMap: Record<string, LucideIcon> = {
   "heart-handshake": HeartHandshake,
 };
 
-const highlightIconMap: Record<string, LucideIcon> = {
-  armchair: Armchair,
-  sprout: Sprout,
-};
-
 export default function Approach() {
   return (
     <section id="abordagem" className="bg-dark py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
         <Reveal>
           {/* Eyebrow: pill no mobile, rótulo simples no desktop */}
-          <span className="mb-4 inline-block rounded-full border border-gold/50 px-4 py-2 text-xs font-semibold tracking-[0.2em] text-gold uppercase lg:hidden">
+          <span className="mx-auto mb-4 block w-fit rounded-full border border-gold/50 px-4 py-2 text-xs font-semibold tracking-[0.2em] text-gold uppercase lg:hidden">
             {approachContent.eyebrow}
           </span>
           <p className="mb-3 hidden text-sm font-semibold tracking-[0.2em] text-gold uppercase lg:block">
             {approachContent.eyebrow}
           </p>
 
-          <h2 className="mb-6 font-serif text-4xl leading-tight text-white">
+          <h2 className="mb-6 text-center font-serif text-4xl leading-tight text-white lg:text-left">
             {approachContent.heading}{" "}
             <em className="text-gold italic">{approachContent.headingHighlight}</em>
           </h2>
@@ -69,39 +57,10 @@ export default function Approach() {
             ))}
           </div>
 
-          {/* Destaques: cards no mobile, lista simples no desktop */}
-          <div className="mb-8 grid grid-cols-2 gap-4 lg:hidden">
-            {approachContent.highlights.map((item) => {
-              const Icon = highlightIconMap[item.icon];
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-2xl bg-cream p-5 text-center"
-                >
-                  <span className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-gold/15 text-gold">
-                    <Icon size={26} strokeWidth={1.5} />
-                  </span>
-                  <p className="font-serif text-base text-gold-dark">{item.title}</p>
-                  <span className="mx-auto my-2 block h-px w-8 bg-gold" />
-                  <p className="text-sm leading-relaxed text-[#4a4a4a]">{item.description}</p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="mb-8 hidden space-y-4 lg:block">
-            {approachContent.highlights.map((item, index) => (
-              <div key={item.title}>
-                <p
-                  className={`font-serif text-lg underline decoration-2 underline-offset-4 ${
-                    index % 2 === 0
-                      ? "text-gold decoration-gold"
-                      : "text-accent decoration-accent"
-                  }`}
-                >
-                  {item.title}
-                </p>
-                <p className="text-sm text-white/60">{item.description}</p>
-              </div>
+          {/* Barras de progresso, no mesmo estilo do site da Miriam Souza */}
+          <div className="mb-8 flex flex-col gap-5">
+            {approachContent.progressBars.map((bar) => (
+              <ProgressBar key={bar.label} label={bar.label} value={bar.value} />
             ))}
           </div>
 

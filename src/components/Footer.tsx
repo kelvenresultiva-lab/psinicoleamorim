@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-dark py-14 text-white/70">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:text-left">
           <div>
             <p className="mb-2 font-serif text-xl text-white">
               {siteConfig.professionalName}
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col items-center gap-2 border-t border-white/10 pt-6 text-center text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>
             © {new Date().getFullYear()} {siteConfig.professionalName}. Todos
             os direitos reservados.
