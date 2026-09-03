@@ -70,9 +70,9 @@ export const heroContent = {
 
 export const introContent = {
   heading: "Um espaço para",
-  headingHighlight: "cuidar de si e das suas relações.",
+  headingHighlight: "pensar sobre si e suas relações.",
   paragraph:
-    "A terapia é um convite para desacelerar, ouvir a si mesmo e compreender o que te move. Aqui, você encontra um ambiente seguro e livre de julgamentos para elaborar emoções, melhorar seus relacionamentos e viver com mais equilíbrio e sentido.",
+    "O processo terapêutico é uma oportunidade de refletir sobre a vida e seu cotidiano, uma pausa para repensar o que costuma funcionar no automático e um convite para criar seu próprio modo de navegar pelo mundo.",
   items: [
     {
       icon: "message-heart",
@@ -103,7 +103,7 @@ export const aboutContent = {
   eyebrow: "OLÁ, SOU NICOLE",
   heading: "Uma trajetória dedicada ao cuidado emocional",
   paragraphs: [
-    "Atendo adolescentes, adultos e casais em processos de análise pessoal, com foco em quem deseja se conhecer melhor e transformar questões que incomodam — não trabalho com uma área voltada a diagnósticos específicos.",
+    "Atendo adolescentes, adultos e casais, a partir do enfoque psicanalítico, que coloca em voga seus desejos pessoais, seus conflitos e seu modo de se relacionar com o mundo.",
     "Acredito que a terapia não se limita a aliviar o sofrimento, mas também a compreender como ele se constrói. Meu trabalho busca oferecer um espaço de escuta em que cada pessoa possa se implicar em sua própria história, reconhecendo padrões, conflitos e formas de se relacionar consigo mesma e com os outros.",
     "Mais do que oferecer respostas prontas, procuro construir, junto ao paciente, novas formas de viver sua própria história, sempre a partir da abordagem psicanalítica.",
     "Ofereço uma escuta atenta para ajudar cada pessoa a construir um saber próprio sobre sua história e diminuir o sofrimento diante dos conflitos da vida.",
