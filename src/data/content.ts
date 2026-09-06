@@ -9,7 +9,7 @@ export const siteConfig = {
   brand: "AFETO",
   professionalName: "Nicole Amorim",
   professionalNameShort: "Nicole Amorim",
-  title: "Psicanalista Clínica",
+  title: "Psicóloga e Psicanalista Clínica",
   city: "São João del-Rei - MG",
   phoneDisplay: "(32) 99199-3814",
   phoneWhatsapp: "5532991993814",
@@ -40,7 +40,7 @@ export const headerCta = {
 
 export const heroContent = {
   title: "Nicole Amorim",
-  subtitle: "PSICANALISTA",
+  subtitle: "PSICÓLOGA E PSICANALISTA",
   taglineStart: "Um espaço seguro para você ser,",
   taglineHighlight: "sentir e se cuidar.",
   // Exibida só no mobile, no lugar dos bullets (que ficam só a partir do sm).
@@ -95,8 +95,8 @@ export const introContent = {
 export const aboutContent = {
   badge: "CUIDADO EM CADA HISTÓRIA",
   image: {
-    src: "/images/sobre-foto.jpg",
-    alt: "Retrato de Nicole Amorim",
+    src: "/images/abordagem-foto.jpg",
+    alt: "Nicole Amorim sorrindo, lendo um livro em ambiente acolhedor",
   },
   formationIcon: "graduation-cap",
   formationText: "Psicanalista formada pela Universidade Federal de São João del-Rei (UFSJ).",
@@ -136,39 +136,42 @@ export const galleryContent = {
   ],
 };
 
-// ATENÇÃO: os depoimentos abaixo são fictícios (texto de exemplo).
-// Substituir por avaliações reais antes de publicar o site — divulgar
-// depoimentos inventados como se fossem reais é enganoso e pode violar
-// o CDC (arts. 30/37) e as diretrizes de publicidade do CFP.
+// Avaliações reais extraídas do perfil do Google Maps da Nicole em
+// 05/09/2026, confirmadas por ela como sendo de pacientes dela. Ao
+// atualizar, copie fielmente nome, nota, texto e contagem direto do
+// Google — não inventar nem alterar depoimentos (CDC arts. 30/37 e
+// diretrizes de publicidade do CFP).
 export const testimonialsContent = {
   heading: "O que dizem sobre meu trabalho:",
+  googleUrl:
+    "https://www.google.com/maps/place/Nicole+Amorim+-+Psic%C3%B3loga+e+Psicanalista/@-21.1231332,-44.2486206,17z/data=!4m8!3m7!1s0xa1c92413964607:0x697894eec6cf10e0!8m2!3d-21.1231332!4d-44.2486206!9m1!1b1!16s%2Fg%2F11m78444pf",
   summary: {
     name: siteConfig.professionalNameShort,
-    subtitle: "Psicanalista | Atendimento Presencial e Online",
+    subtitle: "Psicóloga e Psicanalista | Atendimento Presencial e Online",
     rating: 5.0,
-    reviewCount: 87,
+    reviewCount: 10,
   },
   reviews: [
     {
-      name: "Marina C.",
-      avatar: "woman",
-      timeAgo: "há 2 semanas",
+      name: "Marcos Ferraz",
+      badge: "Guia Local · 49 avaliações",
+      timeAgo: "há 10 meses",
       rating: 5,
-      text: "A Nicole me ajudou a entender padrões emocionais que eu carregava há anos. Um trabalho sério e muito acolhedor, me sinto segura em cada sessão.",
+      text: "Profissional excelente e atenciosa. O consultório é um ambiente muito acolhedor e tranquilo, o que contribui positivamente para o processo. Recomendo muito!",
     },
     {
-      name: "Beatriz A.",
-      avatar: "mother",
-      timeAgo: "há 1 mês",
+      name: "Gabriel Rodrigues Ramos",
+      badge: "6 avaliações",
+      timeAgo: "há 7 meses",
       rating: 5,
-      text: "Comecei a terapia em um momento muito difícil e encontrei um espaço de escuta genuína, sem julgamentos. Recomendo muito o trabalho dela.",
+      text: "Ela é uma ótima profissional, muito humana e atenciosa.",
     },
     {
-      name: "Juliana P.",
-      avatar: "young-woman",
-      timeAgo: "há 2 meses",
+      name: "Miguel Costa",
+      badge: "10 avaliações",
+      timeAgo: "há 10 meses",
       rating: 5,
-      text: "Profissional extremamente atenciosa e ética. O atendimento online funcionou perfeitamente para minha rotina, sem perder a qualidade do presencial.",
+      text: "Profissional de extrema competência, com escuta verdadeira e olhar humano. Atendimento sempre acolhedor e respeitoso.",
     },
   ],
 } as const;
@@ -184,7 +187,7 @@ export const approachContent = {
     },
     {
       icon: "heart-handshake",
-      text: "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento e transformação genuína.",
+      text: "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento.",
     },
   ],
   progressBars: [
@@ -195,44 +198,44 @@ export const approachContent = {
   secondaryCta: { label: "Agende sua sessão", href: "#contato" },
   badge: "COMPROMISSO EM CADA SESSÃO",
   image: {
-    src: "/images/abordagem-foto.jpg",
-    alt: "Nicole Amorim sorrindo, lendo um livro em ambiente acolhedor",
+    src: "/images/processo.jpeg",
+    alt: "Nicole Amorim em pé, retrato em ambiente acolhedor",
   },
 };
 
 export const benefitsContent = {
-  eyebrow: "ALGUNS BENEFÍCIOS DA PSICOTERAPIA",
-  heading: "Ambiente seguro, respeitoso, sigiloso e livre de julgamentos",
+  eyebrow: "ALGUNS BENEFÍCIOS DA TERAPIA DE CASAL",
+  heading: "Um espaço para falar, escutar e repensar a relação",
   subtext:
-    "A psicoterapia oferece benefícios que vão muito além da sessão, refletindo em diversas áreas da sua vida.",
+    "A terapia de casal é um espaço para que os parceiros possam falar sobre seus conflitos, compreender seu modo de se relacionar e ouvir o que o outro tem a dizer, buscando novos arranjos para a relação.",
   items: [
     {
       number: "01",
       icon: "heart-pulse",
-      title: "Controle das emoções",
+      title: "Falar sobre os conflitos",
       description:
-        "Desenvolva maior consciência e equilíbrio emocional diante dos desafios do dia a dia.",
+        "Um espaço para colocar em palavras aquilo que tem causado sofrimento, tensão ou afastamento na relação.",
     },
     {
       number: "02",
       icon: "users-round",
-      title: "Melhora nas relações",
+      title: "Ouvir o que o outro tem a dizer",
       description:
-        "Construa vínculos mais saudáveis com família, amigos e parceiros a partir do autoconhecimento.",
+        "A terapia favorece uma escuta mais atenta, permitindo que cada parceiro possa falar e também compreender melhor o que o outro expressa.",
     },
     {
       number: "03",
       icon: "shield-check",
-      title: "Diminuição da agressividade",
+      title: "Compreender a dinâmica do casal",
       description:
-        "Compreenda a origem de reações impulsivas e aprenda formas mais saudáveis de lidar com elas.",
+        "Possibilita refletir sobre padrões de relacionamento, impasses recorrentes e formas de vínculo construídas ao longo da relação.",
     },
     {
       number: "04",
       icon: "moon",
-      title: "Diminuição da insônia",
+      title: "Buscar novos caminhos",
       description:
-        "Alivie a ansiedade e os pensamentos acelerados que impactam diretamente a qualidade do sono.",
+        "A partir da escuta e da reflexão, o casal pode construir novos arranjos e formas mais conscientes de se relacionar.",
     },
   ],
 };

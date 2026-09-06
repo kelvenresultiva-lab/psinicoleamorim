@@ -28,8 +28,8 @@ export default function Benefits() {
         {benefitsContent.items.map((item, index) => {
           const Icon = iconMap[item.icon];
           return (
-            <Reveal key={item.number} delayMs={index * 100}>
-              <div className="relative rounded-2xl border border-[#EEEEEE] p-6">
+            <Reveal key={item.number} delayMs={index * 100} className="h-full">
+              <div className="relative flex h-full flex-col rounded-2xl border border-[#EEEEEE] p-6">
                 <span className="pointer-events-none absolute top-2 right-4 font-serif text-5xl text-cream-dark">
                   {item.number}
                 </span>

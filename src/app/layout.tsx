@@ -32,7 +32,9 @@ export const metadata: Metadata = {
   title: `${siteConfig.professionalName} | ${siteConfig.title} em ${siteConfig.city}`,
   description: `Psicoterapia para adultos, casais e famílias com abordagem psicanalítica. Atendimento presencial em ${siteConfig.city} e online. Agende uma conversa.`,
   keywords: [
+    "psicóloga",
     "psicanalista",
+    "psicóloga e psicanalista",
     "psicanalista clínica",
     "psicoterapia",
     "terapia online",
