@@ -89,7 +89,10 @@ export default function Approach() {
           </a>
         </Reveal>
 
-        <Reveal delayMs={150} className="relative mx-auto w-full max-w-md">
+        <Reveal
+          delayMs={150}
+          className="relative mx-auto hidden w-full max-w-md lg:block"
+        >
           <div className="relative aspect-[6/7] w-full overflow-hidden rounded-2xl shadow-xl">
             <Image
               src={approachContent.image.src}
