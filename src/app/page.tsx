@@ -7,10 +7,15 @@ import Testimonials from "@/components/Testimonials";
 import Approach from "@/components/Approach";
 import Benefits from "@/components/Benefits";
 import Faq from "@/components/Faq";
+import LatestPosts from "@/components/LatestPosts";
 import MapSection from "@/components/MapSection";
 import ContactBar from "@/components/ContactBar";
 import Footer from "@/components/Footer";
 import WhatsappButton from "@/components/WhatsappButton";
+
+// Revalida a home periodicamente para que novos textos publicados no
+// /admin apareçam na seção de blog sem precisar de um novo deploy.
+export const revalidate = 60;
 
 export default function Home() {
   return (
@@ -25,6 +30,7 @@ export default function Home() {
         <Approach />
         <Benefits />
         <Faq />
+        <LatestPosts />
         <MapSection />
         <ContactBar />
       </main>

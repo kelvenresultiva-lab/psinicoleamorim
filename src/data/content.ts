@@ -201,6 +201,28 @@ export const approachContent = {
     src: "/images/processo.jpeg",
     alt: "Nicole Amorim em pé, retrato em ambiente acolhedor",
   },
+  // Conteúdo exclusivo da versão mobile desta seção — composição editorial
+  // (sem barras de progresso), apresentando os dois formatos de atendimento.
+  mobile: {
+    eyebrow: "COMO FUNCIONA O ATENDIMENTO",
+    headingStart: "Um espaço de escuta para o que acontece em você e",
+    headingHighlight: "na relação",
+    intro: "O processo terapêutico parte da escuta cuidadosa da história, dos conflitos e das relações de cada pessoa, respeitando seu tempo e sua singularidade.",
+    blocks: [
+      {
+        number: "01",
+        icon: "user",
+        title: "Atendimento individual",
+        text: "Um espaço de escuta para compreender conflitos, sofrimentos, repetições e questões que atravessam sua história e suas relações.",
+      },
+      {
+        number: "02",
+        icon: "heart-handshake",
+        title: "Terapia de casal",
+        text: "Um espaço para que os parceiros possam falar sobre seus conflitos, compreender seu modo de se relacionar e ouvir o que o outro tem a dizer.",
+      },
+    ],
+  },
 };
 
 export const benefitsContent = {
@@ -238,6 +260,14 @@ export const benefitsContent = {
         "A partir da escuta e da reflexão, o casal pode construir novos arranjos e formas mais conscientes de se relacionar.",
     },
   ],
+};
+
+export const blogTeaserContent = {
+  eyebrow: "BLOG",
+  heading: "Textos sobre terapia e autoconhecimento",
+  subtext:
+    "Reflexões que compartilho a partir da escuta clínica, para pensar sobre si e sobre as relações.",
+  ctaLabel: "Ver todos os textos",
 };
 
 export const faqContent = {
