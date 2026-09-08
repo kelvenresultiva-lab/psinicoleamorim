@@ -1,16 +1,27 @@
 import Image from "next/image";
-import { User, HeartHandshake, CalendarDays, type LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarDays,
+  Sprout,
+  User,
+  type LucideIcon,
+} from "lucide-react";
 import { approachContent } from "@/data/content";
-import ProgressBar from "./ProgressBar";
 import Reveal from "./Reveal";
-import WhatsappIcon from "./WhatsappIcon";
 
-const blockIconMap: Record<string, LucideIcon> = {
+const pillarIconMap: Record<string, LucideIcon> = {
   user: User,
-  "heart-handshake": HeartHandshake,
+  sprout: Sprout,
 };
 
 export default function Approach() {
+  // Título mobile quebra a última palavra do heading em uma segunda linha
+  // em destaque — só a formatação muda; o texto continua vindo do mesmo
+  // campo usado no desktop.
+  const headingWords = approachContent.heading.trim().split(" ");
+  const headingHighlightWord = headingWords.pop() ?? "";
+  const headingLead = headingWords.join(" ");
+
   return (
     <section id="abordagem" className="bg-dark py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
@@ -18,45 +29,54 @@ export default function Approach() {
           {/* ===== Composição editorial exclusiva do mobile ===== */}
           <div className="lg:hidden">
             <Reveal>
-              <span className="mx-auto mb-5 block w-fit rounded-full border border-gold/40 px-4 py-2 text-[11px] font-semibold tracking-[0.2em] text-gold uppercase">
-                {approachContent.mobile.eyebrow}
-              </span>
-              <h2 className="mb-6 text-center font-serif text-[clamp(1.75rem,7vw,2.25rem)] leading-[1.3] text-white">
-                {approachContent.mobile.headingStart}{" "}
-                <em className="text-gold italic">
-                  {approachContent.mobile.headingHighlight}
-                </em>
-              </h2>
-              <p className="mx-auto mb-12 max-w-sm text-center leading-relaxed text-white/60">
-                {approachContent.mobile.intro}
-              </p>
+              <div className="flex flex-col items-center text-center">
+                <p className="text-sm font-semibold tracking-[0.2em] text-gold uppercase">
+                  {approachContent.eyebrow}
+                </p>
+                <span className="mt-4 mb-7 h-px w-10 bg-gold" />
+                <h2 className="font-serif text-4xl leading-tight text-white">
+                  {headingLead}
+                  <br />
+                  <em className="text-gold italic">{headingHighlightWord}</em>
+                </h2>
+              </div>
+
+              <div className="mt-8 space-y-5">
+                {approachContent.paragraphs.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="mx-auto max-w-[300px] text-center leading-relaxed text-white/60"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </Reveal>
 
-            <div className="mb-12">
-              {approachContent.mobile.blocks.map((block, index) => {
-                const Icon = blockIconMap[block.icon];
+            <div className="mt-12 mb-12">
+              {approachContent.pillars.map((pillar, index) => {
+                const Icon = pillarIconMap[pillar.icon];
                 return (
-                  <Reveal key={block.number} delayMs={index * 120}>
+                  <Reveal key={pillar.label} delayMs={index * 120}>
                     <div
                       className={
-                        "text-center" +
-                        (index > 0 ? " mt-8 border-t border-gold/20 pt-8" : "")
+                        "flex items-start gap-4" +
+                        (index > 0
+                          ? " mt-8 border-t border-gold/15 pt-8"
+                          : "")
                       }
                     >
-                      <div className="mb-4 flex items-center justify-center gap-3">
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/[0.06] text-gold/80">
-                          <Icon size={17} strokeWidth={1.25} />
-                        </span>
-                        <span className="font-serif text-sm tracking-wide text-gold/80">
-                          {block.number}
-                        </span>
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/[0.06] text-gold">
+                        <Icon size={20} strokeWidth={1.5} />
+                      </span>
+                      <div className="pt-1">
+                        <p className="mb-2 text-xs font-semibold tracking-[0.15em] text-gold uppercase">
+                          {pillar.label}
+                        </p>
+                        <p className="leading-relaxed text-white/60">
+                          {pillar.text}
+                        </p>
                       </div>
-                      <h3 className="mb-2 font-serif text-xl text-white">
-                        {block.title}
-                      </h3>
-                      <p className="mx-auto max-w-xs leading-relaxed text-white/60">
-                        {block.text}
-                      </p>
                     </div>
                   </Reveal>
                 );
@@ -66,14 +86,14 @@ export default function Approach() {
             <Reveal>
               <a
                 href="#contato"
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-semibold tracking-wider text-white uppercase transition-colors hover:bg-gold-dark"
+                className="mt-12 flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-colors hover:bg-gold-dark"
               >
                 {approachContent.ctaLabel}
-                <WhatsappIcon size={16} />
+                <ArrowRight size={16} />
               </a>
               <a
                 href={approachContent.secondaryCta.href}
-                className="mt-4 flex items-center justify-center gap-2 text-xs font-medium text-white/45 hover:text-gold"
+                className="mt-[18px] flex items-center justify-center gap-2 text-xs font-medium text-white/40 hover:text-gold"
               >
                 <CalendarDays size={14} />
                 {approachContent.secondaryCta.label}
@@ -88,22 +108,34 @@ export default function Approach() {
             </p>
 
             <h2 className="mb-6 text-left font-serif text-4xl leading-tight text-white">
-              {approachContent.heading}{" "}
-              <em className="text-gold italic">{approachContent.headingHighlight}</em>
+              {approachContent.heading}
+              {approachContent.headingHighlight && (
+                <>
+                  {" "}
+                  <em className="text-gold italic">
+                    {approachContent.headingHighlight}
+                  </em>
+                </>
+              )}
             </h2>
 
-            <div className="mb-8 space-y-4">
+            <div className="mb-10 space-y-4">
               {approachContent.paragraphs.map((paragraph) => (
-                <p key={paragraph.text} className="leading-relaxed text-white/70">
-                  {paragraph.text}
+                <p key={paragraph} className="leading-relaxed text-white/70">
+                  {paragraph}
                 </p>
               ))}
             </div>
 
-            {/* Barras de progresso, no mesmo estilo do site da Miriam Souza */}
-            <div className="mb-8 flex flex-col gap-5">
-              {approachContent.progressBars.map((bar) => (
-                <ProgressBar key={bar.label} label={bar.label} value={bar.value} />
+            {/* Blocos editoriais, no lugar das antigas barras de progresso */}
+            <div className="mb-8 flex flex-col gap-6">
+              {approachContent.pillars.map((pillar) => (
+                <div key={pillar.label}>
+                  <p className="mb-2 text-xs font-semibold tracking-[0.15em] text-gold uppercase">
+                    {pillar.label}
+                  </p>
+                  <p className="leading-relaxed text-white/70">{pillar.text}</p>
+                </div>
               ))}
             </div>
 

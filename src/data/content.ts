@@ -178,21 +178,23 @@ export const testimonialsContent = {
 
 export const approachContent = {
   eyebrow: "COMO FUNCIONA MEU TRABALHO",
-  heading: "Análise pessoal e terapia",
-  headingHighlight: "de casal",
+  heading: "Psicoterapia individual",
+  headingHighlight: "",
   paragraphs: [
+    "A psicoterapia individual é um espaço de escuta voltado para a compreensão da sua história, dos conflitos que se repetem e das questões que atravessam sua vida.",
+    "Ao longo do processo, trabalhamos sentimentos, relações, escolhas e padrões que muitas vezes são difíceis de perceber sozinho, respeitando o seu tempo e a sua singularidade.",
+  ],
+  pillars: [
     {
       icon: "user",
-      text: "Parto da escuta cuidadosa da história de cada paciente, respeitando seu tempo e particularidades.",
+      label: "ESCUTA E ACOLHIMENTO",
+      text: "Um espaço seguro para falar sobre o que você sente, pensa e vive, sem julgamentos.",
     },
     {
-      icon: "heart-handshake",
-      text: "Utilizo a abordagem psicanalítica como base teórica, buscando construir, junto com você, um caminho de autoconhecimento.",
+      icon: "sprout",
+      label: "COMPREENSÃO E PROCESSO",
+      text: "Um acompanhamento construído com profundidade, respeitando o seu tempo e o seu modo de existir.",
     },
-  ],
-  progressBars: [
-    { label: "Escuta acolhedora", value: 100 },
-    { label: "Compromisso com o processo", value: 97 },
   ],
   ctaLabel: "VAMOS CONVERSAR?",
   secondaryCta: { label: "Agende sua sessão", href: "#contato" },
@@ -200,28 +202,6 @@ export const approachContent = {
   image: {
     src: "/images/processo.jpeg",
     alt: "Nicole Amorim em pé, retrato em ambiente acolhedor",
-  },
-  // Conteúdo exclusivo da versão mobile desta seção — composição editorial
-  // (sem barras de progresso), apresentando os dois formatos de atendimento.
-  mobile: {
-    eyebrow: "COMO FUNCIONA O ATENDIMENTO",
-    headingStart: "Um espaço de escuta para o que acontece em você e",
-    headingHighlight: "na relação",
-    intro: "O processo terapêutico parte da escuta cuidadosa da história, dos conflitos e das relações de cada pessoa, respeitando seu tempo e sua singularidade.",
-    blocks: [
-      {
-        number: "01",
-        icon: "user",
-        title: "Atendimento individual",
-        text: "Um espaço de escuta para compreender conflitos, sofrimentos, repetições e questões que atravessam sua história e suas relações.",
-      },
-      {
-        number: "02",
-        icon: "heart-handshake",
-        title: "Terapia de casal",
-        text: "Um espaço para que os parceiros possam falar sobre seus conflitos, compreender seu modo de se relacionar e ouvir o que o outro tem a dizer.",
-      },
-    ],
   },
 };
 
