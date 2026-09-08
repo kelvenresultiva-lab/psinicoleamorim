@@ -99,7 +99,7 @@ export const aboutContent = {
     alt: "Nicole Amorim sorrindo, lendo um livro em ambiente acolhedor",
   },
   formationIcon: "graduation-cap",
-  formationText: "Psicanalista formada pela Universidade Federal de São João del-Rei (UFSJ).",
+  formationText: "Psicóloga formada pela Universidade Federal de São João del-Rei (UFSJ).",
   eyebrow: "OLÁ, SOU NICOLE",
   heading: "Uma trajetória dedicada ao cuidado emocional",
   paragraphs: [
